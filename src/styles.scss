@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//caso seja adicionar o !important, irá sobrescrever a ViewEncapsulation.Emulated dos componentes
+.emulated{
+    background-color: pink;
+}

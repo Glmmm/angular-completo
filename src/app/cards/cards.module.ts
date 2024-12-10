@@ -19,7 +19,7 @@ import { MatSliderModule } from '@angular/material/slider';
     CardComponent,
     CardButtonComponent,
     CardRoxoComponent,
-    // CardRoxoButtonComponent
+    CardRoxoButtonComponent,
   ],
 })
 export class CardsModule {}

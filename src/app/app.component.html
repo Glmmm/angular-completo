@@ -1,7 +1,4 @@
-<div class="cards-container">
-  <app-card></app-card>
+<input id="meu-input" type="text" value="nao possui binding" disabled>
+<input id="meu-input" [type]="tipo" [value]="texto" [disabled]="desabilitado">
 
-  <app-card-roxo></app-card-roxo>
-
-  <app-card-button></app-card-button>
-</div>
+<button (click)="alterarEstado()">Alterar Estado Input</button>

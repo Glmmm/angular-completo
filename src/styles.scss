@@ -1,11 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
 
-//ausencia de espaço indica que o atributo está diretamente ligado a tag, com espaço indicaria que esta dentro da tag Ex: "mat-slider .custom-slider"
-mat-slider.custom-slider .mdc-slider__track--active_fill {
-  border-color: yellow;
-}
-
-// se eu ver alguém fazendo isso julgarei
-// mat-slider[_ngcontent-ng-c3733455175] .mdc-slider__track--active_fill{
-// border-color: yellow;
-// }

@@ -1,4 +1,5 @@
-<input id="meu-input" type="text" value="nao possui binding" disabled>
-<input id="meu-input" [type]="tipo" [value]="texto" [disabled]="desabilitado">
-
+<input type="text" value="nao possui binding" disabled>
+<input id="meu-input" (input)="alterarValorInput($event)" [type]="tipo" [value]="texto" [disabled]="desabilitado">
+<br>
 <button (click)="alterarEstado()">Alterar Estado Input</button>
+<button (click)="alterarTipoInput()">Alterar Tipo Input</button>

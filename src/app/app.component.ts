@@ -6,18 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  texto = 'possui binding';
-  tipo = 'text';
-  desabilitado = false;
+  btnColor = '#ccc';
+  btnSize = '110px';
+  alterarValor(e: Event) {
+    const value = (e.target as HTMLInputElement).value;
+    console.log(e);
+    return (this.btnColor = `#${value}`);
+  }
+  styleModel = {
+    width: '160px',
+    backgroundColor: 'black',
+    color: 'white',
+  };
 
-  alterarEstado() {
-    return (this.desabilitado = !this.desabilitado);
-  }
-  alterarTipoInput() {
-    this.tipo == 'password' ? (this.tipo = 'text') : (this.tipo = 'password');
-  }
-  alterarValorInput(event: Event) {
-    const currentValue = (event.target as HTMLInputElement).value;
-    console.log(currentValue);
+  atualizarStyle() {
+    console.log(this.styleModel);
+    this.styleModel = {
+      width: '180px',
+      backgroundColor: 'white',
+      color: 'black',
+    };
   }
 }

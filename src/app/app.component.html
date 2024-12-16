@@ -1,6 +1,13 @@
-<input type="text" value="nao possui binding" disabled>
-<input id="meu-input" (input)="alterarValorInput($event)" [type]="tipo" [value]="texto" [disabled]="desabilitado">
+<button style="width: 100px; background-color: aqua;">SEM STYLE BINDING</button>
 <br>
-<button (click)="alterarEstado()">Alterar Estado Input</button>
-<button (click)="alterarTipoInput()" [disabled]="desabilitado">Alterar Tipo Input</button>
-<button [attr.disabled]="desabilitado ? true: null">TESTE</button>
+<button [style.width]="btnSize" [style.backgroundColor]="'blue'">COM STYLE BINDING</button>
+<br>
+<button [style.width.px]="'120'" [style.backgroundColor]="btnColor">COM STYLE BINDING MEDIDA DEFINIDA</button>
+<br>
+<input type="number" style="width: 120px;" (keyup)="alterarValor($event)">
+<br>
+<button [style]="'width: 140px; backgroundColor: brown;color: white'">OUTRO TIPO DE BINDING</button>
+<br>
+<button [style]="{width: '150px', backgroundColor:'orange'}">MAIS UM TIPO DE BINDING</button>
+<br>
+<button [style]="styleModel" (click)="atualizarStyle()">Atualizar Estilo</button>

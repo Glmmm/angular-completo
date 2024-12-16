@@ -1,13 +1,4 @@
-<button style="width: 100px; background-color: aqua;">SEM STYLE BINDING</button>
-<br>
-<button [style.width]="btnSize" [style.backgroundColor]="'blue'">COM STYLE BINDING</button>
-<br>
-<button [style.width.px]="'120'" [style.backgroundColor]="btnColor">COM STYLE BINDING MEDIDA DEFINIDA</button>
-<br>
-<input type="number" style="width: 120px;" (keyup)="alterarValor($event)">
-<br>
-<button [style]="'width: 140px; backgroundColor: brown;color: white'">OUTRO TIPO DE BINDING</button>
-<br>
-<button [style]="{width: '150px', backgroundColor:'orange'}">MAIS UM TIPO DE BINDING</button>
-<br>
-<button [style]="styleModel" (click)="atualizarStyle()">Atualizar Estilo</button>
+<button [class.red-button]="true" (click)="verde= false">VERMELHO</button>
+<button [class.green-button]="!false" (click)="verde = true">VERDE</button>
+
+<button [class]="{'red-button':!verde, 'green-button':verde}">COR</button>

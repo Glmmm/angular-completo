@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   btnColor = '#ccc';
   btnSize = '110px';
+  verde = true;
   alterarValor(e: Event) {
     const value = (e.target as HTMLInputElement).value;
     console.log(e);

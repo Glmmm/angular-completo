@@ -1,4 +1,22 @@
-<button [class.red-button]="true" (click)="verde= false">VERMELHO</button>
-<button [class.green-button]="!false" (click)="verde = true">VERDE</button>
+<div class="cards-container">
+  <!-- <app-card 
+    planType="Simples Teste" 
+    [planPriceAlias]="1000">
+  </app-card> -->
+  
+  <app-card 
+    [planType]="cardPlanType" 
+    [planPriceAlias]="cardPlanPrice">
+  </app-card>
 
-<button [class]="{'red-button':!verde, 'green-button':verde}">COR</button>
+  <app-card-roxo></app-card-roxo>
+</div>
+
+<br />
+
+<input 
+  #meuInput
+  type="text"
+  (keyup)="handlePlanType(meuInput.value)"
+  placeholder="Digite o plano"
+/>

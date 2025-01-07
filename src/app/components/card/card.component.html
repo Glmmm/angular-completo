@@ -1,0 +1,6 @@
+<div [class]="{'card': true, 'card_orange': cardStyleOrange, 'card_purple':cardStylePurple}">
+    <div class="card_plan card_item">Plano <b>{{cardPlan}}</b></div>
+    <div class="card_price card_item">R${{cardPrice}},00/Mês</div>
+
+    <app-button [text]="'Adquirir'" [style]="alteraBtnStyle()" (clicado)="btnClicado()"></app-button>
+</div>

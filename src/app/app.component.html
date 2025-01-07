@@ -1,22 +1,4 @@
-<div class="cards-container">
-  <!-- <app-card 
-    planType="Simples Teste" 
-    [planPriceAlias]="1000">
-  </app-card> -->
-  
-  <app-card 
-    [planType]="cardPlanType" 
-    [planPriceAlias]="cardPlanPrice">
-  </app-card>
-
-  <app-card-roxo></app-card-roxo>
+<div class="card_container">
+    <app-card [style]="'orange'" [plan]="'Simples'" [price]="1000" (btnClicadoEmit)="btnClicadoHandler()"></app-card>
+    <app-card [style]="'purple'" [plan]="'Completo'" [price]="2000" (btnClicadoEmit)="btnClicadoHandler()"></app-card>
 </div>
-
-<br />
-
-<input 
-  #meuInput
-  type="text"
-  (keyup)="handlePlanType(meuInput.value)"
-  placeholder="Digite o plano"
-/>

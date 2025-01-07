@@ -6,16 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  selectedPerson: number | undefined;
-  lista = [
-    { nome: 'Rogerio Rei', idade: 34 },
-    { nome: 'Gustavo Ramos', idade: 56 },
-    { nome: 'Pedro Alvares', idade: 23 },
-    { nome: 'Alan Tuning', idade: 43 },
-  ];
-  public selectPerson(i: number) {
-    console.log(i);
+  fontSize: number = 15;
+  textColor: 'white' | 'orange' = 'white';
+  buttonText: 'Branca' | 'Laranja' = 'Laranja';
 
-    this.selectedPerson = i;
+  public increaseFontSize() {
+    this.fontSize += 5;
+  }
+
+  public changeFontColor() {
+    if (this.textColor === 'white') {
+      this.textColor = 'orange';
+      this.buttonText = 'Branca';
+    } else {
+      this.textColor = 'white';
+      this.buttonText = 'Laranja';
+    }
   }
 }

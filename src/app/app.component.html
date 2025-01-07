@@ -1,9 +1,8 @@
-<ng-container *ngIf="lista">
-    <div class="lista">
-        <div class="item" *ngFor="let item of lista;let i = index" [class.item-odd]="i%2 == 1" (click)="selectPerson(i)"
-            [class.item-highlighted]="selectedPerson == i">
-            <p class="item-name">{{i}} - {{item.nome}}</p>
-            <p class="item-age">{{item.idade}}</p>
-        </div>
-    </div>
-</ng-container>
+<h1 [ngStyle]="{'font-size':fontSize + 'px', 'color': textColor,}">
+    Texto
+</h1>
+
+<h1 [style.font-size.px]="fontSize" [style.color]='textColor'>Texto de novo</h1>
+
+<button (click)="increaseFontSize()">Aumenta</button>
+<button (click)="changeFontColor()">{{buttonText}}</button>

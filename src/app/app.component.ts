@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  name: string = 'Guilherme';
+  showContent = true;
 
-  // public changeName(e: string) {
-  //   console.log(e);
-  //   this.name = e;
-  // }
+  pessoa = {
+    status: 1,
+    name: undefined,
+  };
+
+  changeShowContent() {
+    this.showContent = !this.showContent
+  }
 }

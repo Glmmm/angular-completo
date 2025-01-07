@@ -6,14 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  showContent = true;
+  selectedPerson: number | undefined;
+  lista = [
+    { nome: 'Rogerio Rei', idade: 34 },
+    { nome: 'Gustavo Ramos', idade: 56 },
+    { nome: 'Pedro Alvares', idade: 23 },
+    { nome: 'Alan Tuning', idade: 43 },
+  ];
+  public selectPerson(i: number) {
+    console.log(i);
 
-  pessoa = {
-    status: 1,
-    name: undefined,
-  };
-
-  changeShowContent() {
-    this.showContent = !this.showContent
+    this.selectedPerson = i;
   }
 }

@@ -1,11 +1,9 @@
-<ng-container *ngIf="showContent; then Template; else OutroTemplate"></ng-container>
-
-<ng-template #Template>
-    <div style="background-color: green;">Template com "THEN"</div>
-</ng-template>
-
-<ng-template #OutroTemplate>
-    <div style="background-color: red;">Template com "ELSE"</div>
-</ng-template>
-
-<button (click)="changeShowContent()">TROCAR</button>
+<ng-container *ngIf="lista">
+    <div class="lista">
+        <div class="item" *ngFor="let item of lista;let i = index" [class.item-odd]="i%2 == 1" (click)="selectPerson(i)"
+            [class.item-highlighted]="selectedPerson == i">
+            <p class="item-name">{{i}} - {{item.nome}}</p>
+            <p class="item-age">{{item.idade}}</p>
+        </div>
+    </div>
+</ng-container>

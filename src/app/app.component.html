@@ -1,8 +1,12 @@
-<h1 [ngStyle]="{'font-size':fontSize + 'px', 'color': textColor,}">
-    Texto
-</h1>
+<h1 [ngClass]="{
+    'is-green': isGreen,
+    'is-orange': !isGreen,
+}">Eu não sou Verde</h1>
 
-<h1 [style.font-size.px]="fontSize" [style.color]='textColor'>Texto de novo</h1>
+<h1 [ngClass]="{
+    'is-green': !isGreen,
+    'is-orange': isGreen,
+}">Eu não sou Laranja</h1>
 
-<button (click)="increaseFontSize()">Aumenta</button>
-<button (click)="changeFontColor()">{{buttonText}}</button>
+<button (click)="setGreen()">Verde</button>
+<button (click)="setOrange()">Laranja</button>

@@ -1,4 +1,9 @@
-<div class="card_container">
-    <app-card [style]="'orange'" [plan]="'Simples'" [price]="1000" (btnClicadoEmit)="btnClicadoHandler()"></app-card>
-    <app-card [style]="'purple'" [plan]="'Completo'" [price]="2000" (btnClicadoEmit)="btnClicadoHandler()"></app-card>
-</div>
+<p>Nome:</p>
+<input type="text" [(ngModel)]="name">
+
+<p>Nome digitado : {{name}}</p>
+
+<!-- 
+[ngModel]="name"
+(ngModelChange)="changeName($event)"
+-->

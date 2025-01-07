@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public btnClicadoHandler() {
-    console.log('funciona');
-  }
+  name: string = 'Guilherme';
+
+  // public changeName(e: string) {
+  //   console.log(e);
+  //   this.name = e;
+  // }
 }

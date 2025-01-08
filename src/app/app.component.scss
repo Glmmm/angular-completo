@@ -1,13 +1,12 @@
-.is-big {
-  font-size: 50px;
-}
-
-.is-green {
-  color: white;
+.active {
+  color: #f4f4f4;
   background-color: green;
 }
-
-.is-orange {
-  color: white;
+.partial {
+  color: #f4f4f4;
   background-color: orange;
+}
+.blocked {
+  color: #f4f4f4;
+  background-color: red;
 }

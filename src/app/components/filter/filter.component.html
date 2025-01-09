@@ -1,0 +1,34 @@
+<div class="filter">
+    <form class="form">
+        <div class="form-input-name">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Ex: Rogerio" value="">
+            </mat-form-field>
+        </div>
+        <div class="form-input-date">
+            <mat-form-field appearance="outline">
+                <mat-label>Selecione uma data</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="Start date">
+                    <input matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+            </mat-form-field>
+        </div>
+        <div class="form-input-select">
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="form-submit-btn">
+            <button mat-raised-button color="primary">Buscar</button>
+        </div>
+    </form>
+</div>

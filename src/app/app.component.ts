@@ -8,5 +8,11 @@ import { UsersList } from './mocks/user.mock';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  userSelected: User = UsersList[0];
+  showUserDetails: boolean = false;
+  userSelected: User = {} as User;
+
+  public userSelectedHandler(user: User) {
+    this.showUserDetails = true;
+    return (this.userSelected = user);
+  }
 }

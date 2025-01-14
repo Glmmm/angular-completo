@@ -7,5 +7,5 @@ import { User } from 'src/app/models/user/user.model';
   styleUrls: ['./user-details.component.scss'],
 })
 export class UserDetailsComponent {
-  @Input({ required: true }) user = {} as User;
+  @Input() user: User = {} as User;
 }

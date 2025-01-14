@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +6,17 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private cdRef: ChangeDetectorRef) {}
-  teste = 'Rogerin';
-  
-  public changeDetection() {
-    this.cdRef.detectChanges();
+  clicked(input: HTMLInputElement) {
+    console.log(input.value);
+    input.value = 'Atualizado';
   }
 }
+
+const pai = () => {
+  let pai = 'pai'; 
+  const filha = () => {
+    let filha = 'filha';
+    pai = 'teste';
+    //ASSIM POR DIANTE
+  };
+};

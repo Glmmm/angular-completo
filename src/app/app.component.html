@@ -1,8 +1,16 @@
-<input type="text" #input>
+<!-- <input type="text" #input ngModel>
 Valor: {{input.value}}
-<button (click)="changeDetection()">Atualizar</button>
+<button (click)="clicked(input)">Atualizar</button> -->
 
-<br>
+<div class="pai" *ngIf="true">
+    <input type="text" #inputPai ngModel>
+    valorPai: {{inputPai.value}}
+    <!-- valorFilho: {{inputFilho.value}} ESCOPO NÃO PERMITE-->
 
-<input type="text" #input2 [(ngModel)]="teste">
-Valor: {{input2.value}}
+    <div class="filho" *ngIf="true">
+        <input type="text" #inputFilho ngModel>
+        valorPai: {{inputPai.value}}
+        valorFilho: {{inputFilho.value}}
+    </div>
+    
+</div>

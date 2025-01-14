@@ -10,7 +10,7 @@
             <mat-form-field appearance="outline">
                 <mat-label>Selecione uma data</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                    <input matStartDate placeholder="Data Inicial" [(ngModel)]="filterOptions.starDate">
+                    <input matStartDate placeholder="Data Inicial" [(ngModel)]="filterOptions.startDate">
                     <input matEndDate placeholder="Data Final" [(ngModel)]="filterOptions.endDate">
                 </mat-date-range-input>
                 <mat-datepicker-toggle matIconSuffix [for]=" picker"></mat-datepicker-toggle>

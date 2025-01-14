@@ -11,7 +11,7 @@ export class FilterComponent {
 
   filterOptions: FilterOptions = {
     name: undefined,
-    starDate: undefined,
+    startDate: undefined,
     endDate: undefined,
     status: undefined,
   };

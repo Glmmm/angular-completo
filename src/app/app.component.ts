@@ -30,17 +30,20 @@ export class AppComponent implements OnInit {
     console.log(filterOptions);
     this.usersListFiltered = this.filterUsersList(filterOptions, this.usersList);
   }
-  
-  filterUsersList(filterOptions: FilterOptions, usersList: User[]): User[] {
+
+  public filterUsersList(filterOptions: FilterOptions, usersList: User[]): User[] {
     let filteredList: User[] = [];
 
     filteredList = this.filteredListByName(filterOptions.name, usersList);
+    filteredList = this.filteredListByStatus(filterOptions.status, filteredList);
+    filteredList = this.filteredListByDate(filterOptions.startDate, filterOptions.endDate, filteredList);
 
     return filteredList;
   }
 
-  filteredListByName(name: string | undefined, usersList: User[]): User[] {
+  public filteredListByName(name: string | undefined, usersList: User[]): User[] {
     const NAME_NOT_TYPPED = name === undefined;
+
     if (NAME_NOT_TYPPED) {
       return usersList;
     }
@@ -49,4 +52,18 @@ export class AppComponent implements OnInit {
 
     return filteredList;
   }
+
+  public filteredListByStatus(status: boolean | undefined, usersList: User[]): User[] {
+    const STATUS_NOT_TYPPED = status === undefined;
+
+    if (STATUS_NOT_TYPPED) {
+      return usersList;
+    }
+
+    const filteredList = usersList.filter((user) => user.ativo === status);
+
+    return filteredList;
+  }
+
+
 }

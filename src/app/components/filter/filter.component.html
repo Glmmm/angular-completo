@@ -1,34 +1,34 @@
 <div class="filter">
-    <form class="form">
+    <div class="form">
         <div class="form-input-name">
             <mat-form-field appearance="outline">
                 <mat-label>Nome</mat-label>
-                <input matInput placeholder="Ex: Rogerio" value="">
+                <input matInput placeholder="Ex: Rogerio" value="" [(ngModel)]="filterOptions.name">
             </mat-form-field>
         </div>
         <div class="form-input-date">
             <mat-form-field appearance="outline">
                 <mat-label>Selecione uma data</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                    <input matStartDate placeholder="Data Inicial">
-                    <input matEndDate placeholder="Data Final">
+                    <input matStartDate placeholder="Data Inicial" [(ngModel)]="filterOptions.starDate">
+                    <input matEndDate placeholder="Data Final" [(ngModel)]="filterOptions.endDate">
                 </mat-date-range-input>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker-toggle matIconSuffix [for]=" picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
             </mat-form-field>
         </div>
         <div class="form-input-select">
             <mat-form-field appearance="outline">
                 <mat-label>Status</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let food of foods" [value]="food.value">
-                        {{food.viewValue}}
+                <mat-select [(ngModel)]="filterOptions.status">
+                    <mat-option *ngFor="let status of statusOptions" [value]="status.value">
+                        {{status.description}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
         <div class="form-submit-btn">
-            <button mat-raised-button color="primary">Buscar</button>
+            <button mat-raised-button color="primary" (click)="onFilter()">Buscar</button>
         </div>
-    </form>
+    </div>
 </div>

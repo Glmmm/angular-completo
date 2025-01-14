@@ -1,10 +1,10 @@
 <div class="container">
     <div class="left-container">
         <div class="top-div">
-            <app-filter></app-filter>
+            <app-filter (onFilter)="onFilterHandler($event)"></app-filter>
         </div>
         <div class="main-left-div">
-            <app-users-list (userSelected)="userSelectedHandler($event)"></app-users-list>
+            <app-users-list [usersList]="usersListFiltered" (onUserSelected)="onUserSelectedHandler($event)"></app-users-list>
         </div>
     </div>
     <div class="right-div">

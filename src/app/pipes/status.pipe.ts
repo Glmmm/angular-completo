@@ -5,6 +5,6 @@ import { Pipe } from '@angular/core';
 })
 export class StatusPipe {
   transform(status: boolean): string {
-    return status ? 'Ativo' : 'Desativado';
+    return status ? 'Ativo' : 'Inativo';
   }
 }

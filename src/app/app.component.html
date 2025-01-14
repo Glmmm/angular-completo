@@ -1,0 +1,8 @@
+<input type="text" #input>
+Valor: {{input.value}}
+<button (click)="changeDetection()">Atualizar</button>
+
+<br>
+
+<input type="text" #input2 [(ngModel)]="teste">
+Valor: {{input2.value}}

@@ -17,6 +17,7 @@ export class FilterComponent {
   };
 
   statusOptions = [
+    { description: '', value: undefined },
     { description: 'Ativo', value: true },
     { description: 'Inativo', value: false },
   ];

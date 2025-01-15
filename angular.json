@@ -47,7 +47,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "optimization": true
+              "optimization": false
             }
           },
           "defaultConfiguration": "production"

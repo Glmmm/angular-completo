@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  clicked(input: HTMLInputElement) {
-    console.log(input.value);
-    input.value = 'Atualizado';
+  @ViewChild('input') inputEl!: ElementRef<HTMLInputElement>;
+  @ViewChild('div') divEl!: ElementRef<HTMLDivElement>;
+
+  public changeText() {
+    this.inputEl.nativeElement.value = 'Atualizado';
+  }
+  public focus() {
+    this.inputEl.nativeElement.focus();
+  }
+  public changeDiv() {
+    this.divEl.nativeElement.textContent = 'Banana';
   }
 }
-
-const pai = () => {
-  let pai = 'pai'; 
-  const filha = () => {
-    let filha = 'filha';
-    pai = 'teste';
-    //ASSIM POR DIANTE
-  };
-};

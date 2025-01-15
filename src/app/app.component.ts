@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FilhoComponent } from './filho/filho.component';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +7,10 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('input') inputEl!: ElementRef<HTMLInputElement>;
-  @ViewChild('div') divEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('filho') filhoCompRef!: FilhoComponent;
 
-  public changeText() {
-    this.inputEl.nativeElement.value = 'Atualizado';
-  }
-  public focus() {
-    this.inputEl.nativeElement.focus();
-  }
-  public changeDiv() {
-    this.divEl.nativeElement.textContent = 'Banana';
+  public alterarFilho() {
+    this.filhoCompRef.message = 'Trocaram meu valor';
+    this.filhoCompRef.chamarAlert();
   }
 }

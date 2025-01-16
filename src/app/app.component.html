@@ -1,1 +1,9 @@
-<input type="text" #input *ngIf="true">
+<button 
+    #btn 
+    *ngFor="let btn of buttonsList; let i = index" 
+    class="btn-{{i}}"
+    (click)="changeColor($event)">{{btn}}</button>
+<br>
+<button (click)="resetButtons()">Resetar</button>
+<button (click)="alterarPrimeiro()">alterarPrimeiro</button>
+<button (click)="remove()">Remover</button>

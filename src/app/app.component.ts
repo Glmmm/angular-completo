@@ -1,16 +1,22 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FilhoComponent } from './filho/filho.component';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  @ViewChild('filho') filhoCompRef!: FilhoComponent;
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('input') inputEl!: ElementRef<HTMLInputElement>;
+  // @ViewChild('input', { static: true } ) inputEl!: ElementRef<HTMLInputElement>; ESTATICO = NÃO POSSUI LOGICA ANTERIOR A SUA RENDERIZAÇÃO, OU ALGO ASSIM
 
-  public alterarFilho() {
-    this.filhoCompRef.message = 'Trocaram meu valor';
-    this.filhoCompRef.chamarAlert();
+  constructor() {
+    console.log('constructor');
+  }
+  ngOnInit(): void {
+    console.log('onInit');
+  }
+  ngAfterViewInit(): void {
+    console.log('afterViewInit');
+    this.inputEl.nativeElement.focus();
   }
 }

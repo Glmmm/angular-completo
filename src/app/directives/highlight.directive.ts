@@ -1,7 +1,7 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[highlight]',
+  selector: '[dirHighlight]',
 })
 export class HighlightDirective {
   @HostBinding('style.background-color') bgColor = 'transparent';

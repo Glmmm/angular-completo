@@ -7,9 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { DirectiveComponent } from './directive/directive.component';
 import { NoDirectiveComponent } from './no-directive/no-directive.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DisabledDirective } from './directives/disabled.directive';
 
 @NgModule({
-  declarations: [AppComponent, DirectiveComponent, NoDirectiveComponent, HighlightDirective],
+  declarations: [AppComponent, DirectiveComponent, NoDirectiveComponent, HighlightDirective, DisabledDirective],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

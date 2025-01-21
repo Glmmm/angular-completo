@@ -8,9 +8,10 @@ import { DirectiveComponent } from './directive/directive.component';
 import { NoDirectiveComponent } from './no-directive/no-directive.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DisabledDirective } from './directives/disabled.directive';
+import { StyleDirective } from './directives/style.directive';
 
 @NgModule({
-  declarations: [AppComponent, DirectiveComponent, NoDirectiveComponent, HighlightDirective, DisabledDirective],
+  declarations: [AppComponent, DirectiveComponent, NoDirectiveComponent, HighlightDirective, DisabledDirective, StyleDirective],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

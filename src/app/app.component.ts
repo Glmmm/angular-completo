@@ -26,4 +26,12 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.divEl.nativeElement.textContent = 'Div';
     this.divEl.nativeElement.classList.add('classe');
   }
+  public addElement() {
+    const newDiv = document.createElement('div');
+
+    newDiv.textContent = 'Nova Div';
+    newDiv.classList.add('classe');
+
+    this.elRef.nativeElement.appendChild(newDiv);
+  }
 }

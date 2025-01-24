@@ -8,9 +8,9 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
-.classe {
-  border: 1px solid red;
-  border-radius: 8px;
-  padding: 24px;
-  margin: 24px;
+.bg-red {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  margin: 8px;
 }

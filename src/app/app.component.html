@@ -1,7 +1,13 @@
-<div class="cards-container">
-  <app-card></app-card>
-
-  <app-card-roxo></app-card-roxo>
-
-  <app-card-button></app-card-button>
+<div class="container">
+    <div class="left-container">
+        <div class="top-div">
+            <app-filter (onFilter)="onFilterHandler($event)"></app-filter>
+        </div>
+        <div class="main-left-div">
+            <app-users-list [usersList]="usersListFiltered" (onUserSelected)="onUserSelectedHandler($event)"></app-users-list>
+        </div>
+    </div>
+    <div class="right-div">
+        <app-user-details *ngIf="showUserDetails" [user]="userSelected"></app-user-details>
+    </div>
 </div>

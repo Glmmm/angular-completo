@@ -1,6 +1,10 @@
-import { isWithinInterval } from "date-fns";
-import { User } from "src/app/models/user/user.model";
+import { Injectable } from '@angular/core';
+import { isWithinInterval } from 'date-fns';
+import { User } from 'src/app/models/user/user.model';
 
+@Injectable({
+  providedIn: 'root',
+})
 export class FilterUsersUtils {
   public filteredListByName(name: string | undefined, usersList: User[]): User[] {
     const NAME_NOT_TYPPED = name === undefined;

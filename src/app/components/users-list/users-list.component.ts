@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { UsersList } from 'src/app/mocks/user.mock';
 import { User } from 'src/app/models/user/user.model';
 
 @Component({

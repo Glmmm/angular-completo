@@ -9,8 +9,8 @@ import { FilterUsersUtils } from './utils/filter/filter-users.utils';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private filterUtils: FilterUsersUtils) { }
-  
+  constructor(private filterUtils: FilterUsersUtils){};
+
   usersList: User[] = [];
   usersListFiltered: User[] = [];
   showUserDetails: boolean = false;

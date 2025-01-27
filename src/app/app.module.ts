@@ -1,14 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { ComponentsModule } from './components/components.module';
+import { BalanceCardComponent } from './components/balance-card/balance-card.component';
+import { CreditCardComponent } from './components/credit-card/credit-card.component';
+import { DebitCardComponent } from './components/debit-card/debit-card.component';
+import { ClientCardComponent } from './components/client-card/client-card.component';
+import { CardItemComponent } from './components/card-item/card-item.component';
+import { CardLineComponent } from './components/card-line/card-line.component';
+import { CardTitleComponent } from './components/card-title/card-title.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, ComponentsModule],
+  declarations: [
+    AppComponent,
+    BalanceCardComponent,
+    CreditCardComponent,
+    DebitCardComponent,
+    ClientCardComponent,
+    CardItemComponent,
+    CardLineComponent,
+    CardTitleComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

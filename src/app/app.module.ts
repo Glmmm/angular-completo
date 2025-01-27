@@ -4,10 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { FocusSecondDirective } from './directives/focus-second.directive';
+import { XssComponent } from './xss/xss.component';
 
 @NgModule({
-  declarations: [AppComponent, FocusSecondDirective],
+  declarations: [AppComponent, XssComponent],
   imports: [BrowserModule, BrowserAnimationsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

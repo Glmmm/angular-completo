@@ -1,5 +1,13 @@
 .card {
-  border-radius: 8px;
-  padding: 8px;
-  background-color: #ddd;
+  max-width: 400px;
+}
+.card-header {
+  padding: 48px;
+  height: 40%;
+  background-color: #ffad36;
+}
+.card-content {
+  padding: 48px;
+  height: 60%;
+  background-color: #ff5916;
 }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardTextModule } from './directives/card-text/card-text.module';
+import { CardTextModule } from './directives/card-text.module';
 
 @NgModule({
   declarations: [AppComponent],

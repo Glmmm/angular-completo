@@ -1,0 +1,17 @@
+.card-avatar-small img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.card-avatar-medium img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.card-avatar-large img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}

@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CardTextModule } from './directives/card-text.module';
+import { CardComponent } from './card/card.component';
+import { CardModule } from './card/directives/card.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, CardTextModule],
+  declarations: [AppComponent, CardComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, CardModule],
   providers: [],
   bootstrap: [AppComponent],
 })

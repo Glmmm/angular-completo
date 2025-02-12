@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MeuCompComponent } from './meu-comp/meu-comp.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 
 @NgModule({
-  declarations: [AppComponent, MeuCompComponent],
+  declarations: [AppComponent, NgTemplateComponent],
   imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

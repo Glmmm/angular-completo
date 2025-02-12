@@ -1,35 +1,16 @@
-<!-- 
-<div>
-  Div:
-  <app-meu-comp></app-meu-comp>
+<div *ngIf="true">
+  Texto
 </div>
 
-<ng-container *ngTemplateOutlet="template">
-</ng-container>
-
-<ng-template #template>
-  Template:
-  <app-meu-comp></app-meu-comp>
-</ng-template> 
-
-//// PROJEÇÃO DE CONTEÚDO CONDICIONAL ABAIXO ////
-
-<ng-container *ngIf="false; else elseTemplate">
-  <ng-container *ngTemplateOutlet="Template"></ng-container>
-</ng-container>
-
-<ng-container *ngIf="false; else elseTemplate" [ngTemplateOutlet]="Template">
-</ng-container>
-
--->
-
-<ng-container *ngTemplateOutlet="true ? Template : elseTemplate"></ng-container>
-
-<ng-template #Template>
-  Template:
-  <app-meu-comp></app-meu-comp>
-
+<ng-template [ngIf]="true">
+  <div>Texto</div>
 </ng-template>
+
+<ng-template [ngIf]="true" [ngIfElse]="elseTemplate">
+  Template:
+  <app-ng-template></app-ng-template>
+</ng-template>
+
 <ng-template #elseTemplate>
   Outro Template
 </ng-template>
